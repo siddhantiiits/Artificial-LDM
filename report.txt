@@ -1,0 +1,83 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 19 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: chatbot.py
+--------------------------------------------------------------------------------
+chatbot.py:172:19: WARNING: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+chatbot.py:172:19: ERROR: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib. tf.contrib.rnn.DropoutWrapper cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:184:95: WARNING: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+chatbot.py:184:95: ERROR: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib. tf.contrib.seq2seq.prepare_attention cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:185:32: WARNING: Using member tf.contrib.seq2seq.attention_decoder_fn_train in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+chatbot.py:185:32: ERROR: Using member tf.contrib.seq2seq.attention_decoder_fn_train in deprecated module tf.contrib. tf.contrib.seq2seq.attention_decoder_fn_train cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:191:71: WARNING: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+chatbot.py:191:71: ERROR: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib. tf.contrib.seq2seq.dynamic_rnn_decoder cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:204:95: WARNING: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+chatbot.py:204:95: ERROR: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib. tf.contrib.seq2seq.prepare_attention cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:205:28: WARNING: Using member tf.contrib.seq2seq.attention_decoder_fn_inference in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+chatbot.py:205:28: ERROR: Using member tf.contrib.seq2seq.attention_decoder_fn_inference in deprecated module tf.contrib. tf.contrib.seq2seq.attention_decoder_fn_inference cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:217:73: WARNING: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+chatbot.py:217:73: ERROR: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib. tf.contrib.seq2seq.dynamic_rnn_decoder cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:227:23: WARNING: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+chatbot.py:227:23: ERROR: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib. tf.contrib.rnn.DropoutWrapper cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:231:36: ERROR: Using member tf.contrib.layers.fully_connected in deprecated module tf.contrib. tf.contrib.layers.fully_connected cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:264:29: ERROR: Using member tf.contrib.layers.embed_sequence in deprecated module tf.contrib. tf.contrib.layers.embed_sequence cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+chatbot.py:271:30: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'chatbot.py'
+ outputting to 'chatbot-upgraded.py'
+--------------------------------------------------------------------------------
+
+3:0: INFO: Renamed 'tf.disable_v2_behavior' to 'tf.compat.v1.disable_v2_behavior'
+156:13: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+157:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+158:9: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+159:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+171:11: INFO: Renamed 'tf.contrib.rnn.BasicLSTMCell' to 'tf.compat.v1.nn.rnn_cell.BasicLSTMCell'
+172:19: WARNING: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+172:19: ERROR: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib. tf.contrib.rnn.DropoutWrapper cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+173:19: INFO: Renamed 'tf.contrib.rnn.MultiRNNCell' to 'tf.compat.v1.nn.rnn_cell.MultiRNNCell'
+174:36: INFO: Renamed 'tf.nn.bidirectional_dynamic_rnn' to 'tf.compat.v1.nn.bidirectional_dynamic_rnn'
+184:95: WARNING: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+184:95: ERROR: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib. tf.contrib.seq2seq.prepare_attention cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+185:32: WARNING: Using member tf.contrib.seq2seq.attention_decoder_fn_train in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+185:32: ERROR: Using member tf.contrib.seq2seq.attention_decoder_fn_train in deprecated module tf.contrib. tf.contrib.seq2seq.attention_decoder_fn_train cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+191:71: WARNING: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+191:71: ERROR: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib. tf.contrib.seq2seq.dynamic_rnn_decoder cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+197:29: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+204:95: WARNING: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+204:95: ERROR: Using member tf.contrib.seq2seq.prepare_attention in deprecated module tf.contrib. tf.contrib.seq2seq.prepare_attention cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+205:28: WARNING: Using member tf.contrib.seq2seq.attention_decoder_fn_inference in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+205:28: ERROR: Using member tf.contrib.seq2seq.attention_decoder_fn_inference in deprecated module tf.contrib. tf.contrib.seq2seq.attention_decoder_fn_inference cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+217:73: WARNING: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib.seq2seq. (Manual edit required) tf.contrib.seq2seq.* have been migrated to `tfa.seq2seq.*` in TensorFlow Addons. Please see https://github.com/tensorflow/addons for more info.
+217:73: ERROR: Using member tf.contrib.seq2seq.dynamic_rnn_decoder in deprecated module tf.contrib. tf.contrib.seq2seq.dynamic_rnn_decoder cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+225:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+226:15: INFO: Renamed 'tf.contrib.rnn.BasicLSTMCell' to 'tf.compat.v1.nn.rnn_cell.BasicLSTMCell'
+227:23: WARNING: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+227:23: ERROR: Using member tf.contrib.rnn.DropoutWrapper in deprecated module tf.contrib. tf.contrib.rnn.DropoutWrapper cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+228:23: INFO: Renamed 'tf.contrib.rnn.MultiRNNCell' to 'tf.compat.v1.nn.rnn_cell.MultiRNNCell'
+229:18: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+229:18: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+230:17: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+230:17: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+231:36: ERROR: Using member tf.contrib.layers.fully_connected in deprecated module tf.contrib. tf.contrib.layers.fully_connected cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+264:29: ERROR: Using member tf.contrib.layers.embed_sequence in deprecated module tf.contrib. tf.contrib.layers.embed_sequence cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+267:76: INFO: tf.random_uniform_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+267:76: INFO: Renamed 'tf.random_uniform_initializer' to 'tf.compat.v1.random_uniform_initializer'
+270:44: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+271:30: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+271:30: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+305:18: INFO: Renamed 'tf.placeholder_with_default' to 'tf.compat.v1.placeholder_with_default'
+308:14: INFO: Added keywords to args of function 'tf.shape'
+--------------------------------------------------------------------------------
+
